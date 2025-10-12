@@ -7,12 +7,13 @@
   <meta name="description" content="Profile and blog of Brighton Wanjala, also known as Engineer Brighton Keiser, a visionary Civil Engineering student and future leader from Kenya." />
   <meta name="keywords" content="Brighton Wanjala, Engineer Brighton Keiser, Civil Engineering Kenya, Kenyan student leader, Future Kenyan President, Brighton Keiser blog" />
   <meta name="author" content="Brighton Wanjala" />
+  <link rel="canonical" href="https://brighton456.github.io/Wanjala/" />
 
   <!-- Open Graph for social media -->
   <meta property="og:title" content="Brighton Wanjala | Engineer Brighton Keiser" />
   <meta property="og:description" content="Profile and blog of Brighton Wanjala, a visionary Civil Engineering student and aspiring leader in Kenya." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourgithubusername.github.io/" />
+  <meta property="og:url" content="https://brighton456.github.io/Wanjala/" />
   <meta property="og:image" content="https://i.ibb.co/5gVZ61G9/image.jpg" />
 
   <!-- Twitter Card -->
@@ -30,7 +31,7 @@
     "alternateName": "Engineer Brighton Keiser",
     "description": "A second-year Civil Engineering student at South Eastern Kenya University, aspiring political leader and future President of Kenya.",
     "image": "https://i.ibb.co/5gVZ61G9/image.jpg",
-    "url": "https://yourgithubusername.github.io/",
+    "url": "https://brighton456.github.io/Wanjala/",
     "jobTitle": "Civil Engineering Student",
     "affiliation": {
       "@type": "CollegeOrUniversity",
@@ -332,17 +333,35 @@
       border-top-color: #444;
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav ul {
-        gap: 1rem;
-      }
-      main h1 {
-        font-size: 2rem;
-      }
-      ul.post-list li h3 {
-        font-size: 1.25rem;
-      }
+    /* Social share buttons */
+    #share {
+      margin-top: 3rem;
+      user-select: none;
+    }
+    #share h3 {
+      font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    .social-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .social-buttons button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+    }
+    .social-buttons button:hover,
+    .social-buttons button:focus {
+      background-color: var(--accent-color);
+      outline: none;
     }
   </style>
 </head>
@@ -414,6 +433,18 @@
         </a></li>
       </ul>
     </section>
+
+    <!-- Social Share Buttons -->
+    <section id="share">
+      <h3>Share this blog</h3>
+      <div class="social-buttons" role="group" aria-label="Social Media Share Buttons">
+        <button onclick="shareTwitter()" aria-label="Share on Twitter">🐦 Twitter</button>
+        <button onclick="shareFacebook()" aria-label="Share on Facebook">📘 Facebook</button>
+        <button onclick="shareLinkedIn()" aria-label="Share on LinkedIn">🔗 LinkedIn</button>
+        <button onclick="shareWhatsApp()" aria-label="Share on WhatsApp">📱 WhatsApp</button>
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -437,6 +468,27 @@
         toggleButton.setAttribute('aria-pressed', 'true');
       }
     });
+
+    // Social share functions
+    const blogUrl = encodeURIComponent('https://brighton456.github.io/Wanjala/');
+    const blogTitle = encodeURIComponent('Engineer Brighton Keiser | Brighton Wanjala - Civil Engineering & Leadership');
+
+    function shareTwitter() {
+      const url = `https://twitter.com/intent/tweet?url=${blogUrl}&text=${blogTitle}`;
+      window.open(url, '_blank', 'width=600,height=400');
+    }
+    function shareFacebook() {
+      const url = `https://www.facebook.com/sharer/sharer.php?u=${blogUrl}`;
+      window.open(url, '_blank', 'width=600,height=400');
+    }
+    function shareLinkedIn() {
+      const url = `https://www.linkedin.com/sharing/share-offsite/?url=${blogUrl}`;
+      window.open(url, '_blank', 'width=600,height=400');
+    }
+    function shareWhatsApp() {
+      const url = `https://api.whatsapp.com/send?text=${blogTitle}%20${blogUrl}`;
+      window.open(url, '_blank');
+    }
   </script>
 </body>
 </html>
