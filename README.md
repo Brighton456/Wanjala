@@ -9,6 +9,9 @@
   <meta name="author" content="Brighton Wanjala" />
   <link rel="canonical" href="https://brighton456.github.io/Wanjala/" />
 
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="pWrNGzsXOnhoAA74vBWLBIXr2Nl7b_NEt2HY3gnTU2k" />
+
   <!-- Open Graph for social media -->
   <meta property="og:title" content="Brighton Wanjala | Engineer Brighton Keiser" />
   <meta property="og:description" content="Profile and blog of Brighton Wanjala, a visionary Civil Engineering student and aspiring leader in Kenya." />
@@ -52,7 +55,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
 
   <style>
-    /* Base colors and variables */
     :root {
       --primary-color: #004080;
       --background-light: #f4f7fb;
@@ -64,11 +66,7 @@
       --shadow-light: rgba(0,0,0,0.1);
       --shadow-dark: rgba(255,255,255,0.1);
     }
-
-    /* Reset and base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Open Sans', Arial, sans-serif;
@@ -78,30 +76,20 @@
       color: var(--text-light);
       transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
       min-height: 100vh;
-      padding-top: 60px; /* For fixed nav */
+      padding-top: 60px;
       opacity: 0;
       animation: fadeIn 1s ease forwards;
     }
-
-    /* FadeIn animation */
-    @keyframes fadeIn {
-      to {opacity: 1;}
-    }
-
-    /* Dark mode */
+    @keyframes fadeIn { to {opacity: 1;} }
     body.dark-mode {
       background-color: var(--background-dark);
       color: var(--text-dark);
     }
-
-    /* Container */
     main.container {
       max-width: 900px;
       margin: 2rem auto 4rem;
       padding: 0 1rem;
     }
-
-    /* Header and Navigation */
     header {
       background-color: var(--primary-color);
       color: #fff;
@@ -131,8 +119,6 @@
       color: #cce4ff;
       user-select: none;
     }
-
-    /* Nav menu */
     nav ul {
       list-style: none;
       display: flex;
@@ -140,9 +126,7 @@
       margin: 0;
       padding: 0;
     }
-    nav ul li {
-      margin: 0;
-    }
+    nav ul li { margin: 0; }
     nav a {
       color: #cce4ff;
       text-decoration: none;
@@ -160,15 +144,11 @@
       transform: translateY(-3px);
       box-shadow: 0 4px 8px rgba(30, 144, 255, 0.5);
     }
-    body.dark-mode nav a {
-      color: #a0c8ff;
-    }
+    body.dark-mode nav a { color: #a0c8ff; }
     nav a:focus-visible {
       outline: 2px dashed #fff;
       outline-offset: 3px;
     }
-
-    /* Dark mode toggle button */
     .toggle-switch {
       cursor: pointer;
       width: 40px;
@@ -180,9 +160,7 @@
       user-select: none;
       border: none;
     }
-    body.dark-mode .toggle-switch {
-      background-color: #444;
-    }
+    body.dark-mode .toggle-switch { background-color: #444; }
     .toggle-switch::after {
       content: '';
       position: absolute;
@@ -200,8 +178,6 @@
       background: #222;
       box-shadow: 0 2px 6px rgba(255,255,255,0.2);
     }
-
-    /* Main page title and intro */
     main h1 {
       font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 2.4rem;
@@ -209,20 +185,14 @@
       color: var(--primary-color);
       user-select: none;
     }
-    body.dark-mode main h1 {
-      color: #66b1ff;
-    }
+    body.dark-mode main h1 { color: #66b1ff; }
     main p.intro {
       font-size: 1.15rem;
       margin-bottom: 2rem;
       color: #555;
       user-select: none;
     }
-    body.dark-mode main p.intro {
-      color: #bbb;
-    }
-
-    /* Section headers */
+    body.dark-mode main p.intro { color: #bbb; }
     section h2 {
       font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--primary-color);
@@ -230,11 +200,7 @@
       margin-bottom: 1rem;
       user-select: none;
     }
-    body.dark-mode section h2 {
-      color: #66b1ff;
-    }
-
-    /* Images container for About Me */
+    body.dark-mode section h2 { color: #66b1ff; }
     .images-row {
       display: flex;
       gap: 1rem;
@@ -256,12 +222,8 @@
       outline: none;
     }
     @media (max-width: 600px) {
-      .images-row img {
-        max-width: 100%;
-      }
+      .images-row img { max-width: 100%; }
     }
-
-    /* Blog post list */
     ul.post-list {
       list-style: none;
       padding: 0;
@@ -296,29 +258,10 @@
       color: white;
       box-shadow: 0 10px 20px rgba(30,144,255,0.8);
     }
-
-    ul.post-list li h3 {
-      margin: 0 0 0.4rem 0;
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-    ul.post-list li p {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.45;
-      user-select: text;
-    }
-    ul.post-list li a {
-      color: inherit;
-      text-decoration: none;
-      display: block;
-      outline-offset: 3px;
-    }
-    ul.post-list li a:focus {
-      outline: 2px dashed #fff;
-    }
-
-    /* Footer */
+    ul.post-list li h3 { margin: 0 0 0.4rem 0; font-size: 1.4rem; font-weight: 700; }
+    ul.post-list li p { margin: 0; font-size: 1rem; line-height: 1.45; user-select: text; }
+    ul.post-list li a { color: inherit; text-decoration: none; display: block; outline-offset: 3px; }
+    ul.post-list li a:focus { outline: 2px dashed #fff; }
     footer {
       text-align: center;
       padding: 1.8rem 1rem;
@@ -328,12 +271,7 @@
       user-select: none;
       margin-top: 4rem;
     }
-    body.dark-mode footer {
-      color: #aaa;
-      border-top-color: #444;
-    }
-
-    /* Social share buttons */
+    body.dark-mode footer { color: #aaa; border-top-color: #444; }
     #share {
       margin-top: 3rem;
       user-select: none;
@@ -362,6 +300,11 @@
     .social-buttons button:focus {
       background-color: var(--accent-color);
       outline: none;
+    }
+    @media (max-width: 600px) {
+      nav ul { gap: 1rem; }
+      main h1 { font-size: 2rem; }
+      ul.post-list li h3 { font-size: 1.25rem; }
     }
   </style>
 </head>
@@ -459,8 +402,6 @@
       toggleButton.setAttribute('aria-pressed', isDark);
       localStorage.setItem('darkMode', isDark);
     });
-
-    // Load saved preference on page load
     document.addEventListener('DOMContentLoaded', () => {
       const savedMode = localStorage.getItem('darkMode') === 'true';
       if (savedMode) {
@@ -468,11 +409,9 @@
         toggleButton.setAttribute('aria-pressed', 'true');
       }
     });
-
     // Social share functions
     const blogUrl = encodeURIComponent('https://brighton456.github.io/Wanjala/');
     const blogTitle = encodeURIComponent('Engineer Brighton Keiser | Brighton Wanjala - Civil Engineering & Leadership');
-
     function shareTwitter() {
       const url = `https://twitter.com/intent/tweet?url=${blogUrl}&text=${blogTitle}`;
       window.open(url, '_blank', 'width=600,height=400');
@@ -492,4 +431,3 @@
   </script>
 </body>
 </html>
- 
